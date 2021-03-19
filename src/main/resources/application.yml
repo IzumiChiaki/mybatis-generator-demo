@@ -1,0 +1,23 @@
+# spring配置
+spring:
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_generator_demo?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: admin
+
+# mybatis配置
+mybatis:
+  # 指定xml文件的位置
+  mapper-locations: classpath:mapper/*.xml
+  # 指定domain文件的位置
+  type-aliases-package: com.chiaki.domain
+  # 添加日志实现类以打印日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 服务器配置
+server:
+  # 指定端口
+  port: 8079
