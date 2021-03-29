@@ -8,13 +8,13 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 /**
  * @author chenliang258
  * @date 2021/3/24 15:30
  */
-@EnableSwagger2
+@EnableSwagger2WebMvc
 @Configuration
 public class Swagger2Configuration {
     @Bean
@@ -31,6 +31,7 @@ public class Swagger2Configuration {
         return new ApiInfoBuilder()
                 .title("测试项目 RESTful APIs")
                 .description("测试项目api接口文档")
+                .termsOfServiceUrl("http://www.xx.com")
                 .version("1.0.0")
                 .build();
     }
